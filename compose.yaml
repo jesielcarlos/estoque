@@ -1,0 +1,10 @@
+services:
+  estoque_api:
+    container_name: EstoqueContainer
+    build: .
+    command: sh -c "chmod +x /code/entrypoint.sh && /code/entrypoint.sh"
+    restart: always
+    volumes:
+      - .:/code
+    ports:
+      - 8005:8000

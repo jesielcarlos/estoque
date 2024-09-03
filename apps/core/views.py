@@ -103,4 +103,3 @@ class StockMovementViewSet(viewsets.ViewSet):
         except Exception as e:
             return Response({'error': str(e)}, status=400)
         
-    
