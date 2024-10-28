@@ -8,3 +8,11 @@ services:
       - .:/code
     ports:
       - 8005:8000
+  nginx:
+    build:
+      context: ./nginx  # Diretório onde o Dockerfile do Nginx está
+    container_name: nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      - estoque_api
